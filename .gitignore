@@ -66,3 +66,16 @@ Session.vim
 
 /composer.lock
 /vendor
+tests/
+build/
+demos/
+docs/
+.mailmap
+.gitattributes
+.travis.yml
+CHANGELOG
+CONTRIBUTING.md
+LICENSE
+README
+README.md
+UPGRADE
