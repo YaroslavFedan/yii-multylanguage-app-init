@@ -16,6 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <style>
+        .language{
+            float: right;
+            margin-top: -26px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +41,9 @@
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
-		)); ?>
+		));
+         $this->widget('SLanguageSwitcherWidget');
+        ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

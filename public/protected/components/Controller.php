@@ -20,4 +20,23 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+
+    public function init()
+    {
+        $subdomain = false;
+
+        $parsedUrl = parse_url($_SERVER['HTTP_HOST']);
+        $host = explode('.', $parsedUrl['path']);
+
+        if(count($host) > 2){
+            $subdomain = array_shift($host);
+        }
+
+        Yii::app()->setParams(array('city' => $subdomain));
+
+        if (!empty($_GET['language']))
+            Yii::app()->language = $_GET['language'];
+        parent::init();
+    }
+
 }

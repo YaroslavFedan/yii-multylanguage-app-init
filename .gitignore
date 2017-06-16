@@ -80,3 +80,5 @@ README
 README.md
 UPGRADE
 /public/index-test.php
+*.crt
+*.key
