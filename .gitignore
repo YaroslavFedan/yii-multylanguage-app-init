@@ -82,3 +82,4 @@ UPGRADE
 /public/index-test.php
 *.crt
 *.key
+.github
